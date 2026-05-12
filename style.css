@@ -1,13 +1,10 @@
-/* Цветовая гамма */
+/* Цветовая гамма - нежно фиолетовый градиент */
 :root {
-    --bg: #f0f2f5;
+    --gradient-start: #c084fc;
+    --gradient-end: #a855f7;
     --white: #ffffff;
-    --primary: #2c3e50;
-    --accent: #e67e22;
-    --danger: #e74c3c;
-    --success: #27ae60;
-    --text: #333333;
-    --border: #dddddd;
+    --text: #4c1d95;
+    --shadow: rgba(0,0,0,0.1);
 }
 
 * {
@@ -18,7 +15,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    min-height: 100vh;
     color: var(--text);
 }
 
@@ -28,53 +26,68 @@ body {
     padding: 20px;
 }
 
-/* ШАПКА С МЕНЮ */
+/* ШАПКА */
 .header {
     background: var(--white);
     padding: 20px 30px;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 2px 10px var(--shadow);
+    text-align: center;
     margin-bottom: 30px;
 }
 
 .logo h1 {
-    color: var(--primary);
-    font-size: 24px;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 15px;
-}
-
-.menu-btn {
-    padding: 10px 20px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s;
-    font-weight: bold;
-}
-
-.menu-btn:hover {
-    background: var(--accent);
-    transform: translateY(-2px);
+    color: var(--text);
+    font-size: 28px;
 }
 
 /* ГЛАВНЫЙ БЛОК */
 .main-content {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
+    background: rgba(255,255,255,0.95);
+    padding: 50px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px var(--shadow);
+    margin-bottom: 30px;
 }
 
 .main-content h2 {
-    color: var(--primary);
+    color: var(--text);
     margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #6b21a5;
+}
+
+/* КНОПКИ СНИЗУ */
+.bottom-menu {
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.menu-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
