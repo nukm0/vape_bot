@@ -84,7 +84,7 @@ body {
 
 .menu-btn {
     padding: 12px 30px;
-    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    background: linear-gradient(135deg, #e94560, #ff6b6b);
     color: white;
     text-decoration: none;
     border-radius: 10px;
