@@ -91,3 +91,36 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+/* ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ЛИЧНОГО КАБИНЕТА */
+.login-box, .profile-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-box h3, .profile-box h3 {
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.input-field {
+    padding: 10px 15px;
+    width: 80%;
+    max-width: 250px;
+    border: 2px solid var(--gradient-start);
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: var(--gradient-end);
+}
+
+.profile-box p {
+    margin: 10px 0;
+    padding: 8px;
+    background: rgba(192, 132, 252, 0.1);
+    border-radius: 8px;
+}
