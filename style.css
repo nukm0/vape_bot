@@ -181,3 +181,14 @@ body {
     color: #555;
     line-height: 1.5;
 }
+
+/* ДОПОЛНИТЕЛЬНО - ЯРКИЕ КНОПКИ */
+.profile-box .menu-btn {
+    background: linear-gradient(135deg, #e94560, #ff6b6b);
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #ff6b6b, #e94560);
+}
