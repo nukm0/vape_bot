@@ -17,20 +17,18 @@
         <div class="main-content">
             <h2>👤 Личный кабинет</h2>
             
-            <!-- БЛОК ВХОДА -->
             <div class="login-box" id="loginBox">
                 <h3>Вход в аккаунт</h3>
                 <input type="text" id="loginName" placeholder="Ваше имя" class="input-field">
                 <button onclick="login()" class="menu-btn">Войти</button>
             </div>
 
-            <!-- БЛОК ПРОФИЛЯ (скрыт по умолчанию) -->
             <div class="profile-box" id="profileBox" style="display: none;">
                 <h3>Привет, <span id="userName">---</span>!</h3>
-                <p>📱 Здесь будут ваши объявления</p>
-                <p>⭐ Мои покупки</p>
+                <p>📱 Мои объявления: 3</p>
+                <p>⭐ Покупки: 5</p>
                 <p>📝 Редактировать профиль</p>
-                <button onclick="logout()" class="menu-btn" style="background: #e74c3c;">Выйти</button>
+                <button onclick="logout()" class="menu-btn" style="margin-top: 15px;">Выйти</button>
             </div>
         </div>
 
@@ -42,7 +40,6 @@
     </div>
 
     <script>
-        // Функции входа и выхода
         function login() {
             let name = document.getElementById('loginName').value;
             if (name.trim() !== '') {
@@ -62,7 +59,6 @@
             document.getElementById('loginName').value = '';
         }
 
-        // Проверяем, есть ли уже сохранённый пользователь
         window.onload = function() {
             let savedUser = localStorage.getItem('baraholka_user');
             if (savedUser) {
